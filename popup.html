@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT Summarizer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 300px;
+      padding: 20px;
+    }
+    #summarize {
+      display: inline-block;
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 4px 2px;
+      border-radius: 4px;
+    }
+    #apiKeyInput{
+     width: 100%;
+     height: 30px;
+   }
+   #errorDiv{
+     display: none;
+   }
+   #errorText{
+    color: red;
+   }
+   #header{
+     display: flex;
+     gap: 20px;
+   }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <img src="openai-icon.svg" width="48px" alt="Placeholder" />
+    <h1>ChatGPT Article Summarizer</h1>
+  </div>
+  <input id="apiKeyInput" type="text">
+  <div id="errorDiv">   
+      <span id="errorText">
+        Please enter your API Key
+      </span>
+      <br/>
+      <span>
+        You can get it <a href="https://platform.openai.com/account/api-keys" target="_blank">here</a>
+      </span>
+  </div>
+  <button id="summarize">Save OpenAI API key</button>
+  <script src="popup.js"></script>
+</body>
+</html>
