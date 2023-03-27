@@ -1,40 +1,38 @@
 .selection-button {
-    position: absolute;
-    display: none;
-    background-color: white;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    cursor: pointer;
-    border: 1px solid gray;
-    border-radius: 5px;
-    z-index: 9999;
-    padding:10px;
-    color: gray;
-  }
-  .selection-button div{
-    display: flex;
-    flex-direction: row;
-  }
-  .selection-button img{ 
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-  }
-  .speech-bubble {
-    position: absolute;
-    display: none;
-    max-width: min(90%, 400px);
-    max-height: 400px;
-    overflow-y: auto;
-    padding: 15px 20px;
-    font-size: 1rem;
-    background-color: black;
-    color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    z-index: 10000;
-  }
-
-  
+  position: absolute;
+  display: none;
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 5px;
+  z-index: 9999;
+  padding: 10px;
+  color: gray;
+}
+.selection-button div {
+  display: flex;
+  flex-direction: row;
+}
+.selection-button img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.speech-bubble {
+  position: absolute;
+  display: none;
+  max-width: min(90%, 400px);
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 15px 20px;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  z-index: 10000;
+}

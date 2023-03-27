@@ -1,5 +1,6 @@
 let selectionButton = null;
 let speechBubble = null;
+let isEnebled = true;
 
 function createSelectionButton() {
   const button = document.createElement("button");
@@ -83,8 +84,12 @@ function onDocumentClick(event) {
 }
 
 function onDocumentKeyDown(event) {
-  if (event.key === "Escape" && modal && modal.style.display === "flex") {
-    modal.style.display = "none";
+  if (
+    event.key === "Escape" &&
+    speechBubble &&
+    speechBubble.style.display === "block"
+  ) {
+    speechBubble.style.display = "none";
   }
 }
 
@@ -125,5 +130,9 @@ async function getSummaryFromChatGPT(text) {
   }
 }
 
-document.addEventListener("mouseup", onMouseUp, false);
-document.addEventListener("keydown", onDocumentKeyDown, false);
+chrome.storage.local.get(["isEnebled"]).then(({ isEnebled }) => {
+  if (!isEnebled) return;
+
+  document.addEventListener("mouseup", onMouseUp, false);
+  document.addEventListener("keydown", onDocumentKeyDown, false);
+});
