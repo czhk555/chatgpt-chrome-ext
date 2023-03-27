@@ -92,7 +92,6 @@ async function getSummaryFromChatGPT(text) {
   try {
     // Get the value from the ext local storage
     const { apiKey } = await chrome.storage.local.get(["apiKey"]);
-    console.log("API Value is:", apiKey);
 
     const apiUrl = "https://api.openai.com/v1/completions";
     const prompt = `Please summarize the following text:\n${text}\nSummary:`;
