@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "ChatGPT Article Summarizer",
+    "version": "1.0",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "48": "icon48.png"
+      }
+    },
+    "icons": {
+      "48": "icon48.png"
+    },
+    "permissions": [
+      "activeTab", "storage"
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [ "openai-summarize.svg" ],
+        "matches": [ "*://*/*" ]
+      }
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+      }
+    ]
+  }
+  
